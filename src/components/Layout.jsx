@@ -1,5 +1,7 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
+//Outlet nos ayuda para que los componentes hijos en el main.jsx el parte de children se renderizen donde estableceremos las rutas de nuestra aplicacion o sitio web
+
 export const Layout = () => {
 	const location = useLocation();
 
@@ -13,9 +15,9 @@ export const Layout = () => {
 					<Link
 						className={`${
 							location.pathname === '/'
-								? 'text-emerald-400 border-black border-r-4'
+								? 'text-emerald-400 border-white border-r-4'
 								: 'text-white'
-						} text-2xl block text-white hover:text-emerald-400`}
+						} text-2xl block hover:text-emerald-400`}
 						to='/'
 					>
 						Clientes
@@ -23,9 +25,9 @@ export const Layout = () => {
 					<Link
 						className={`${
 							location.pathname === '/clientes/nuevo'
-								? 'text-emerald-400 border-black border-r-4'
+								? 'text-emerald-400 border-white border-r-4'
 								: 'text-white'
-						} text-2xl block text-white hover:text-emerald-400`}
+						} text-2xl block hover:text-emerald-400`}
 						to='/clientes/nuevo'
 					>
 						Nuevo Cliente

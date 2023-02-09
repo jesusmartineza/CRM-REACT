@@ -9,7 +9,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Layout } from './components/Layout';
 //Importaciones de paginas
 import { NuevoCliente } from './pages/NuevoCliente';
-import { Index } from './pages/Index';
+import { Index, loader as clientesLoader } from './pages/Index';
 
 //createBrowserRouter = un contenedor para manejar las rutas por medio de un arreglo de objetos de las rutas
 //router = el arreglo con las rutas
@@ -26,6 +26,7 @@ const router = createBrowserRouter([
 			{
 				index: true,
 				element: <Index />,
+				loader: clientesLoader,
 			},
 			{
 				path: '/clientes/nuevo',
